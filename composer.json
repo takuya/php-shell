@@ -1,47 +1,48 @@
 {
-    "name": "takuya/php-shell",
-    "description": "Safer shell_exec",
-    "homepage": "https://github.com/takuya/php-shell",
-    "type": "library",
-    "license": "GPL-3.0-or-later",
-    "version": "1.0",
-    "keywords": [
-        "exec",
-        "shell_exec",
-        "command"
-    ],
-    "authors": [
-        {
-            "name": "takuya",
-            "email": "takuya.1st+nospam@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    
-    "autoload": {
-        "psr-4": {
-            "Takuya\\SystemUtil\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.jp"
-        }
+  "name": "takuya/php-shell",
+  "description": "Safer shell_exec",
+  "homepage": "https://github.com/takuya/php-shell",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "version": "1.0",
+  "keywords": [
+    "exec",
+    "shell_exec",
+    "command"
+  ],
+  "authors": [
+    {
+      "name": "takuya",
+      "email": "takuya.1st+nospam@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+      "php": "=>5.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  
+  "autoload": {
+    "psr-4": {
+      "Takuya\\SystemUtil\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.jp"
+    }
+  }
 }
