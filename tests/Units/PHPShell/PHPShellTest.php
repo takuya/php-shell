@@ -11,10 +11,19 @@ class PHPShellTest  extends TestCase {
   
     $this->assertTrue(PHPShell::command_exists('php'));
     $this->assertNotTrue(PHPShell::command_exists('phpdfasklj2390'));
+    $this->assertRegExp('/php$/', PHPShell::which('php'));
+    
+  }
+  public function testModfyPATHEnvironment(){
+    //
+    $PATH = '/tmp/bin';
+    PHPShell::addPATH($PATH);
+    $this->assertRegExp("!{$PATH}$!", PHPShell::getPATH());
+    
   }
   public function testArgsAsEnvironmentExec(){
     $name = "hello";
-    $ret = PHPShell::exec_command('echo $name', ['name'=>$name]);
+    $ret = PHPShell::exec_command('/bin/echo -n $name', ['name'=>$name]);
     $this->assertEquals($name, $ret);
   }
   public function testShellCommandInjection(){
@@ -27,7 +36,7 @@ class PHPShellTest  extends TestCase {
       "='='=a;aa; \ \ curl",
     ];
     foreach ($args_tested as $str) {
-      $ret = PHPShell::exec_command('echo $name', ['name'=>$str]);
+      $ret = PHPShell::exec_command('/bin/echo -n $name', ['name'=>$str]);
       $this->assertEquals($str, $ret);
     }
   }
