@@ -4,6 +4,7 @@
   "homepage": "https://github.com/takuya/php-shell",
   "type": "library",
   "license": "GPL-3.0-or-later",
+  "version": "1.0",
   "keywords": [
     "exec",
     "shell_exec",
