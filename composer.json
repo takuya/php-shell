@@ -15,7 +15,6 @@
       "email": "takuya.1st+nospam@gmail.com"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
       "php": ">=7.0.0"
   },
